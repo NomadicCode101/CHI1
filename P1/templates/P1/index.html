@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body style="font-family: ;">
+
+<div class="container-fluid">
+  
+ <p style="color:gray">Login</p>
+  <div class="row">
+   
+    <div class="col-sm-6" style="background-color:white;height:500px;border:1px solid black;"">
+      
+     <form style="margin-top:100px;">
+      <p>Login to CHI </p>
+      <p>Don't have an Account<span style="color:#FF9100;"> <b>Register</b></span></p>
+    <div class="mb-3">
+        <label class="form-label" for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email" style="background:whitesmoke;">
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="inputPassword">Password</label>
+        <input type="password" class="form-control" id="inputPassword" placeholder="Password"style="background:whitesmoke;">
+    </div>
+    <div class="mb-3">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="checkRemember">
+            <label class="form-check-label" for="checkRemember">Remember me</label>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+</form><form></div>
+    
+    
+    <div class="col-sm-6" style="background-color:#FF9100;display: flex;justify-content:  center;flex-direction: column;">
+        {% load static %}
+        <!-- <img src="C:\Users\yashw\Desktop\Demo\demo\P1\static\CHI_logo.png" style="height:100px; width:80px;justify-content: center;margin-left: 250px;;"><br> -->
+        <img src="{% static 'P1/CHI_logo.png' %}" alt="My image" style="height:100px; width:80px;justify-content: center;margin-left: 250px;;">
+
+       <h2 style="color:white;justify-content: center;margin-left: 100px;
+        ;">The Celeste health Initiative</h2>
+            <p style="color:white;justify-content: center;margin-left: 200px;">Healthcare is a right</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

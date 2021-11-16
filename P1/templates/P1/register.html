@@ -1,0 +1,121 @@
+
+{% block title %}{% endblock %}
+
+{% block content %}
+{%load static%}
+
+
+
+<div class="container-fluid">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <div class="row">
+  <div class="col-sm-6" id="left" style="background-color:rgb(255, 255, 255);display: flex;justify-content: left; flex-direction: column;border: 1px solid black;margin-bottom: 0px;">
+
+
+
+    <h2 style="text-align:center;font-size: 24;font-weight: 500;font-family:montserrat;margin-left: 0px;margin: 30px;; "><B>Register with CHI</B></h2>
+    <h2 style="text-align:center;font-size: 24;font-weight: 500;font-family: montserrat;margin-left: px; padding-top: 0px;"><B>Already have an account? <a href="/login/" style="color: FF9100;">Login</a></B></h2>
+   <form method="post" style="margin-left: 200px;font-family: montserrat;border:none;" >
+    {% csrf_token %}<br>
+
+    {{form.first_name}}<br><br>
+   
+    {{form.last_name}}<br><br>
+    {{form.username}}<br><br>
+    {{form.email}}<br><br>
+    {{form.password1}}<br><br>
+    {{form.password2}}<br><br>
+    <span></span>    
+    {{form.errors}} 
+   
+  
+
+
+
+
+
+
+    <!--      for passing error all types of flash message are present like error,warning,info-->
+    <button type="submit" style="background-color: #00b8d4;border: none;height: 40px;width: 90px;margin-left: 100px;font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">CONTINUE</button>   <!--next button to organizational setup--> 
+  </form>
+    
+  </div>
+
+  
+  <div class="col-sm-6" id="right"  style="background-color: #FF9100;">
+  <div id="logo_align" style="margin-top: 150px;margin-left:120px;height:500px;">
+   <img src="/static/img/CHI_logo.png" style="height: 100px;width: 80px;margin-bottom: 0px;
+
+    border-radius: 0px;margin-top:50px;margin-left:120px
+    ;">
+  
+  
+    <h2 style="color:white;"> The Celeste health Initiative</h2>
+    <h5 style="color:white;margin-left: 80px;">Healthcare is a Right</h5>
+
+  
+  </div>
+  
+  </div>
+  
+  </div>
+  </div>
+
+  <script> 
+    
+    
+    formFields = document.getElementsByTagName('input');
+    formFields[1].placeholder = "First name";
+    formFields[2].placeholder = "Last name";
+    formFields[3].placeholder = "Username";
+    formFields[4].placeholder = "Email";
+    formFields[5].placeholder = "Enter your Password";
+    formFields[6].placeholder = "Confirm your Password";
+
+    formFields[1].style.background="whitesmoke";
+    formFields[1].style.border="none";
+
+    formFields[2].style.background="whitesmoke";
+    formFields[2].style.border="none";
+
+    formFields[3].style.background="whitesmoke";
+    formFields[3].style.border="none";
+
+    formFields[4].style.background="whitesmoke";
+    formFields[4].style.border="none";
+
+    formFields[5].style.background="whitesmoke";
+    formFields[5].style.border="none";
+
+    formFields[6].style.background="whitesmoke";
+    formFields[6].style.border="none";
+    
+    
+    </script>
+
+<!-- 
+  <h2 style="text-align:center;margin-top:100px; ">Sign up</h2>
+  <div style="width: 1600px;height: 1800px;background-color: #ff9c07;align-content: center;/* margin-left:500px; *//* margin-right:400px; *//* margin-top:100px; */">  <form method="post" >
+    {% csrf_token %}
+    
+    <span style="color: red;">{{form.first_name.label}}</span>    
+    {{form.first_name}}<br><br>
+    {{form.last_name.label}}<br>
+    {{form.last_name}}<br><br>
+    {{form.username.label}}<br>
+    {{form.username}}<br><br>
+    {{form.email.label}}<br>
+    {{form.email}}<br><br>
+    {{form.password1.label}}<br>
+    {{form.password1}}<br><br>
+    {{form.password2.label}}<br>
+    {{form.password2}}<br><br>
+    <span></span>    
+    {{form.errors}}   
+    
+{% endblock %}

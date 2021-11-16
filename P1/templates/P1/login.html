@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+
+	
+		
+	
+
+</head>
+<body>
+	<div class="container-fluid">
+  
+			 
+				   <div class="row">
+					    <div class="col-sm-6" id="left" style="height:500px;">
+							<h3 id="form-title" style="margin-top: 50px;">LOGIN TO CHI</h3><br>
+							<br>Don't have an account? <a href="{% url 'register' %}"class="ml-2" style="color: #FF9100;">Register</a><br><br>
+							<form method="POST" action="" style="padding: 5px;">
+								{% csrf_token %}
+										
+									<input type="text" name="username" placeholder="Username..." class="form-control" style="background-color: whitesmoke;border:none;"><br>
+							
+								
+										<input type="password" name="password" placeholder="Password..." class="form-control" style="background-color: whitesmoke;border:none;" >
+										<a href="/reset_password/"class="ml-2" style="color: gray;padding-left: 460px;">Forget Password</a><br><br>
+										 <input class="btn login_btn" type="submit" value="LOG IN" style="background:#00b8d4;margin-left: 500px;"><br>
+									   
+							</form>
+		
+						  {% for message in messages %}
+							<p id="messages">{{message}}</p>
+						   {% endfor %}			
+				
+						
+						   
+								
+							
+						</div>	
+						
+					
+				
+		
+			
+			           <div class="col-sm-6" id="right" style="background-color: #FF9100;height:500px;" >
+				         <div id="log-align" style="margin-left:270px;margin-top:100px;">
+					   <img src="/static/img/CHI_logo.png" style="height: 100px;width: 80px;margin-bottom: 0px;
+					    border-radius: 0px;margin-top:50px;">
+					      <h2 style="color:white;margin-left:-120px;"> The Celeste health Initiative</h2>
+					   <h5 style="color:white;margin-left:-50px;">Healthcare is a Right</h5>
+					       </div>
+			       
+					
+					</div>
+
+		
+	</div>
+</body>
+
+</html>

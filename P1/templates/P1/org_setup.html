@@ -1,0 +1,119 @@
+
+
+  <!--    <h2 style="text-align:center;margin-top:100px; ">Org set up 2</h2>
+  <form method="POST">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit">
+  </form>
+-->
+
+
+
+{% block title %}{% endblock %}
+
+
+{%load static%}
+
+
+
+<div class="container-fluid">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <div class="row">
+  <div class="col-sm-6" id="left" style="background-color:rgb(255, 255, 255);display: flex;justify-content: left; flex-direction: column;border: 1px solid black;margin-bottom: 0px;height: 500px;">
+
+
+
+    <h2 style="text-align:center;font-size: 24;font-weight: 500;font-family: montserrat;margin-left: 50px; "><B>Register with CHI</B></h2>
+    <h2 style="text-align:center;font-size: 24;font-weight: 500;font-family: montserrat;margin-left: 50px; "><B>Already have an account? <a href="/login/" style="color: FF9100;">Login</a></B></h2>
+   <form method="post" style="margin-left: 200px;" >
+    {% csrf_token %}<br>
+    {{form.name}}<br><br>
+    {{form.Otype}}<br><br>
+    {{form.Csize}}<br><br>
+    {{form.Place}}<br><br>
+
+    
+    <span></span>    
+    {{form.errors}} 
+   
+  
+
+
+
+
+
+
+    <!--      for passing error all types of flash message are present like error,warning,info-->
+    <button type="submit" style="background-color: #00b8d4;border: none;height: 40px;width: 90px;margin-left: 100px;">SUBMIT</button>   <!--next button to organizational setup--> 
+  </form>
+    
+  </div>
+
+  
+  <div class="col-sm-6" id="right"  style="background-color: #FF9100;height: 500px;">
+  <div id="logo_align" style="margin-top: 95px;margin-left: 120px;">
+   <img src="/static/img/CHI_logo.png" style="height: 100px;width: 80px;margin-bottom: 0px;
+
+    border-radius: 0px;margin-top:50px;margin-left:120px
+    ;">
+  
+  
+    <h2 style="color:white;"> The Celeste health Initiative</h2>
+    <h5 style="color:white;margin-left: 80px;">Healthcare is a Right</h5>
+
+  
+  </div>
+  
+  </div>
+  
+  </div>
+  </div>
+
+
+</div>
+
+<script> 
+    
+    
+  formFields = document.getElementsByTagName('input');
+  formFields[1].placeholder = "Organization Name";
+  formFields[2].placeholder = "Organization Type";
+  formFields[3].placeholder = "Company size";
+  formFields[4].placeholder = "Place of Incorporation";
+
+
+
+  
+  
+  
+  
+  </script>
+
+
+
+
+
+
+  
+    <!-- {{form2.name.label}}<br><br>
+    {{form2.name}}<br>
+    {{form2.Otype.label}}<br>
+    {{form2.Otype}}<br><br>
+    {{form2.Csize.label}}<br>
+    {{form2.Csize}}<br><br>
+    {{form2.Place.label}}<br>
+    {{form2.Place}}<br><br>
+
+    {{form2.errors}}    -->
+    <!--      for passing error all types of flash message are present like error,warning,info-->
+
+
+    <!-- <button type="submit">Sign Up</button> -->
+  <!-- </form> -->
+<!-- </div> -->

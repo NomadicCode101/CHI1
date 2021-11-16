@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body style="margin-top:100px;">
+	<p style="opacity: 0.6;margin-left:250px;padding-bottom: -50px;">Register&nbsp;</p>
+<div id="main" style="display:flex;margin-left:250px;margin-top:0px;padding-bottom:-50px;">
+	<div id="left"  style="background:white;border:1px solid black;width:350px; height:400px;display:flex;float:right;">
+	 <p style="margin-left:12px;margin-top:20px;font-weight:400;font-size: 20px;"><b>Register for CHI</b></p>&nbsp;&nbsp;<br>
+		
+<br>
+
+		
+		
+	  <p>&nbsp;</p>
+		
+		<form style="margin-top:70px;margin-left:-120px;">
+            {% csrf_token %}
+          
+
+
+            <input type="hidden" name="csrfmiddlewaretoken" value="bhyqk6XxonCXkS9ZaDaUL1rWW0Fv95pWbDPjiJehBX64Fjbn1lJdAfT8bY6DBipe">
+            <tr><th><label for="id_first_name">First name:</label></th><td><input type="text" name="first_name" maxlength="150" id="id_first_name"></td></tr>
+
+<tr><th><label for="id_last_name">Last name:</label></th><td><input type="text" name="last_name" maxlength="150" id="id_last_name"></td></tr>
+
+<tr><th><label for="id_username">Username:</label></th><td><input type="text" name="username" maxlength="150" autofocus required id="id_username"><br><span class="helptext">Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</span></td></tr>
+
+<tr><th><label for="id_email">Email address:</label></th><td><input type="email" name="email" maxlength="254" id="id_email"></td></tr>
+
+<tr><th><label for="id_password1">Password:</label></th><td><input type="password" name="password1" autocomplete="new-password" required id="id_password1"><br></td></tr>
+
+<tr><th><label for="id_password2">Password confirmation:</label></th><td><input type="password" name="password2" autocomplete="new-password" required id="id_password2"><br><span class="helptext">Enter the same password as before, for verification.</span></td></tr>
+
+		
+<!-- 		
+			<input type="text" placeholder="First Name" value="{{form.first_name}}" style="background: whitesmoke;border:none;height:30px;width:250px;"></input><br/>
+	<p></p>
+			<input type="text" placeholder="Last Name" value="{{form.last_name}}" style="background: whitesmoke;border:none;height:30px;width:250px"></input><br/>
+	<p></p>
+	<input type="text" placeholder="Username" value="{{form.username}}" style="background: whitesmoke;border:none;height:30px;width:250px;"></input><br/>
+	<p></p>
+	<input type="email" placeholder="Email" value="{{form.email}}" style="background: whitesmoke;border:none;height:30px;width:250px;"></input><br/><p></p>
+	<input type="password" placeholder="Password" value="{{form.password1}}" style="background: whitesmoke;border:none;height:30px;width:250px;"></input><br/>
+	<p></p>
+	<input type="password" placeholder="Conform Password" value="{{form.password2}}" style="background: whitesmoke;border:none;height:30px;width:250px;"></input><br/>
+<p></p>
+ -->
+
+	
+		<input type="submit" value="REGISTER" style="align-content: right;background: #00B8D4;height:28px;width:70px;display:block;border-radius:5%;border: hidden;align-content:right;color:white;margin-top:10px;margin-left:140px;font-size: 12px;font-family: ">
+
+		</form>
+    </div>
+	<div id="right" style="background:#FF9100; width:350px; height:400px;display:flex;float:right;">
+	<img src="C:\Users\yashw\Desktop\Demo\demo\P1\static\CHI_logo.png" style="height: 100px;width: 80px;
+border-radius: 0px;margin-top:50px;margin-left:120px
+;">
+	
+		
+		<blockquote>
+		  <h2 style="font-family:mullish;color:white;width:600px;margin-top:150px;margin-left:-200px;"> The Celeste health Initiative</h2>
+			<P style="color:white;margin-left:-150px;margin-top:-20px;">Healthcare is a right</P>
+
+
+	  </blockquote>
+<p >&nbsp;</p>
+	
+  </div>
+</div>
+</body>
+</html>
